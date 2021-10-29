@@ -1,3 +1,7 @@
+//COMP 229-005 Midterms
+//Author: Camila Nieto
+//ID: 301175110
+
 let app = require('./server/config/app');
 let debug = require('debug')('comp308-w2019-midterm:server');
 let http = require('http');

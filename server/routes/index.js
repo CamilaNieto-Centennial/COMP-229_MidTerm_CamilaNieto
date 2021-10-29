@@ -1,3 +1,7 @@
+//COMP 229-005 Midterm
+//Author: Camila Nieto
+//ID: 301175110
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();

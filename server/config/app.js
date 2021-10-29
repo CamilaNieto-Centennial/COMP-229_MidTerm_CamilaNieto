@@ -1,3 +1,7 @@
+//COMP 229-005 Midterm
+//Author: Camila Nieto
+//ID: 301175110
+
 // moddules for node and express
 let createError = require('http-errors');
 let express = require('express');

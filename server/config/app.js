@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, '../../client')));
 
 // route redirects
 app.use('/', index);
-app.use('/books', books);
+app.use('/books-list', books);
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,81 @@
+<!--COMP 229-005 Assignment 2-->
+<!--Author: Camila Nieto-->
+<!--ID: 301175110-->
+<% include ../partials/header.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1><!--Add Book-->
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="TitleTextField">Title</label>
+                    <input type="text" class="form-control"
+                    id="TitleTextField"
+                    placeholder="Enter the Book's Title"
+                    name="Title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="DescriptionTextField">Description</label>
+                    <input type="text" class="form-control"
+                    id="DescriptionTextField"
+                    placeholder="Enter the Book's Description"
+                    name="Description" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="PriceTextField">Price</label>
+                    <input type="text" class="form-control"
+                    id="PriceTextField"
+                    placeholder="Enter the Book's Price"
+                    name="Price" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="AuthorTextField">Author</label>
+                    <input type="text" class="form-control"
+                    id="AuthorTextField"
+                    placeholder="Enter the Book's Author"
+                    name="Author" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="GenreTextField">Genre</label>
+                    <input type="text" class="form-control"
+                    id="GenreTextField"
+                    placeholder="Enter the Book's Genre"
+                    name="Genre" required>
+                </div>
+<!--
+                <div class="form-group">
+                    <label for="descriptionTextArea">Description</label>
+                    <textarea type="text" class="form-control"
+                    id="descriptionTextArea"
+                    placeholder="Enter the a brief description of the book"
+                    name="description" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="priceTextField">Price</label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Enter the Book's Price"
+                    name="price" required>
+                </div>
+-->
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/contact-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

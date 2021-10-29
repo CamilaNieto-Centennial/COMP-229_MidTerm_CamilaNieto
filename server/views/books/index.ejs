@@ -4,29 +4,32 @@
     <div class="container">
       <div class="row">
         <div class="col-md-offset-1 col-md-10">
-          <h3>Favourite Books List </h3>
+          <h3><%= title %> </h3><!--Favourite Books List-->
           <!-- ------------------------ -->
           <!-- FIX THE ADD BUTTON BELOW -->
           <!-- ------------------------ -->
-          <a href="" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
+          <a href="/books-list/add" class="btn btn-primary" role="button">
+          <i class="fa fa-plus"></i> Add a book</a>
           <br>
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
-                  <th>Title</th>
+                 <!-- <th>Title</th>-->
+                  <th class="text-center">Title</th>
+                  <th class="text-center">Description</th>
                   <th class="text-center">Price</th>
                   <th class="text-center">Author</th>
                   <th class="text-center">Genre</th>
-                  <th class="text-center"></th>
-                  <th class="text-center"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <!-- Template Row -->
                 <% for (let count = 0; count < books.length; count++) { %>
                 <tr>
-                  <td><%= books[count].Title %></td>
+                  <!--<td>< %= books[count].Title %></td>-->
+                  <td class="text-center">$<%= books[count].Title %></td>
+                  <td class="text-center"><%= books[count].Description %></td>
                   <td class="text-center">$<%= books[count].Price %></td>
                   <td class="text-center"><%= books[count].Author %></td>
                   <td class="text-center"><%= books[count].Genre %></td>
@@ -35,12 +38,16 @@
                     <!-- ------------------------ -->
                     <!-- ADD the EDIT BUTTON HERE -->
                     <!-- ------------------------ -->
+                    <a href="/books-list/edit/<%= books[count]._id %>" class="btn btn-primary btn-sm">
+                    <i class="fas fa-pencil-alt"></i> Edit</a>
                   </td>
 
                   <td class="text-center">
                     <!-- ------------------------ -->
                     <!-- ADD the DELETE BUTTON HERE -->
                     <!-- ------------------------ -->
+                    <a href="/books-list/delete/<%= books[count]._id %>" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash-alt"></i> Delete</a>
                   </td>
                 </tr>
                 <% } %>

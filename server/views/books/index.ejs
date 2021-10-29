@@ -28,7 +28,7 @@
                 <% for (let count = 0; count < books.length; count++) { %>
                 <tr>
                   <!--<td>< %= books[count].Title %></td>-->
-                  <td class="text-center">$<%= books[count].Title %></td>
+                  <td class="text-center"><%= books[count].Title %></td>
                   <td class="text-center"><%= books[count].Description %></td>
                   <td class="text-center">$<%= books[count].Price %></td>
                   <td class="text-center"><%= books[count].Author %></td>
@@ -38,7 +38,7 @@
                     <!-- ------------------------ -->
                     <!-- ADD the EDIT BUTTON HERE -->
                     <!-- ------------------------ -->
-                    <a href="/books-list/edit/<%= books[count]._id %>" class="btn btn-primary btn-sm">
+                    <a href="/books-list/details/<%= books[count]._id %>" class="btn btn-primary btn-sm">
                     <i class="fas fa-pencil-alt"></i> Edit</a>
                   </td>
 
